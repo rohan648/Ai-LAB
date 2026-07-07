@@ -1,1 +1,46 @@
+from collections import deque
+
+def bfs(graph, start_node):
+    """
+    Performs a Breadth-First Search traversal on a graph starting from start_node.
+    """
+    # Track visited nodes to prevent infinite loops in graphs with cycles
+    visited = set()
+    
+    # Initialize a FIFO queue for level-by-level exploration
+    queue = deque([start_node])
+    
+    # Mark the starting node as visited
+    visited.add(start_node)
+    
+    print("BFS Traversal Order:")
+    
+    # Continue exploration while there are nodes waiting in the queue
+    while queue:
+        # Remove and return the node from the front of the queue
+        current_node = queue.popleft()
+        print(current_node, end=" ")
+        
+        # Check all direct neighbors of the current node
+        for neighbor in graph[current_node]:
+            # If the neighbor hasn't been seen yet, process it
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    print()  # For clean output spacing
+
+# --- Example Usage ---
+if __name__ == "__main__":
+    # Define an undirected graph using an adjacency list (dictionary)
+    example_graph = {
+        'A': ['B', 'C'],
+        'B': ['A', 'D', 'E'],
+        'C': ['A', 'F'],
+        'D': ['B'],
+        'E': ['B', 'F'],
+        'F': ['C', 'E']
+    }
+    
+    # Run BFS starting from node 'A'
+    bfs(example_graph, 'A')
 
