@@ -1,4 +1,5 @@
 from collections import deque
+# BFS Function Traversal
 def bfs(graph,start):
     visited= set()
     queue=deque()
@@ -12,7 +13,7 @@ def bfs(graph,start):
             if neighbour in graph[node]:
                 visited.add(neighbour)
                 queue.append(neighbour)
-    
+    # Graph Representation
 graph ={
     'A':['B','C'],
     'B':['D','E'],
