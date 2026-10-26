@@ -1,0 +1,54 @@
+  |   |  
+--+---+--
+  |   |  
+--+---+--
+  |   |  
+
+Player X 's turn
+Enter position (1-9): 5
+
+  |   |  
+--+---+--
+  | X |  
+--+---+--
+  |   |  
+
+Player O 's turn
+Enter position (1-9): 1
+
+O |   |  
+--+---+--
+  | X |  
+--+---+--
+  |   |  
+
+Player X 's turn
+Enter position (1-9): 3
+
+O |   | X
+--+---+--
+  | X |  
+--+---+--
+  |   |  
+
+Player O 's turn
+Enter position (1-9): 3 
+Position already occupied. Choose another.
+Enter position (1-9): 4
+
+O |   | X
+--+---+--
+O | X |  
+--+---+--
+  |   |  
+
+Player X 's turn
+Enter position (1-9): 7
+
+O |   | X
+--+---+--
+O | X |  
+--+---+--
+X |   |  
+
+Player X wins!
